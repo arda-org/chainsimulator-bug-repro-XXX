@@ -1,4 +1,4 @@
-The method `issue_and_set_all_roles(...)` seems not to terminate when called on the storage `NonFungibleTokenMapper`. The caller seems to keep forever the storages:
+The callback of `issue_and_set_all_roles(...)` seems to never terminate and the caller to keep forever the storages:
 
 ```
 {

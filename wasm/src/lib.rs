@@ -5,9 +5,9 @@
 ////////////////////////////////////////////////////
 
 // Init:                                 1
-// Endpoints:                            2
+// Endpoints:                            1
 // Async Callback (empty):               1
-// Total number of exported functions:   4
+// Total number of exported functions:   3
 
 #![no_std]
 
@@ -19,7 +19,6 @@ multiversx_sc_wasm_adapter::endpoints! {
     (
         init => init
         issue_nft => issue_nft
-        get_token_id => get_token_id
     )
 }
 
