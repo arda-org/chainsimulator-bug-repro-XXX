@@ -16,9 +16,24 @@ pub trait Contract {
             token_display_name,
             token_ticker,
             0,
-            None,
+            None, // Some(self.callbacks().set_token_callback()),
         );
     }
+
+    // #[callback]
+    // fn set_token_callback(
+    //     &self,
+    //     #[call_result] result: ManagedAsyncCallResult<TokenIdentifier>,
+    // ) {
+    //     match result {
+    //         ManagedAsyncCallResult::Ok(token_id) => {
+    //             self.nft_token().set_token_id(token_id);
+    //         },
+    //         ManagedAsyncCallResult::Err(_) => {
+    //             self.nft_token().clear();
+    //         },
+    //     }
+    // }
 
     #[storage_mapper("nft_token")]
     fn nft_token(&self) -> NonFungibleTokenMapper;

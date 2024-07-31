@@ -4,7 +4,7 @@ import { FSWorld, e } from "xsuite";
 const egldUnit = 10n ** 18n;
 
 test("Issue a NFT token", async () => {
-	using world = await FSWorld.start();
+	using world = await FSWorld.start({ saveLogs: true });
 
 	const wallet = await world.createWallet({
 		balance: egldUnit,
